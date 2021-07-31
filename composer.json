@@ -1,0 +1,39 @@
+{
+    "name": "torchlight/torchlight-ibis",
+    "description": "A Torchlight client for the PDF book builder Ibis",
+    "homepage": "https://torchlight.dev",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "markdown",
+        "syntax highlighting",
+        "code highlighting",
+        "ibis",
+        "laravel"
+    ],
+    "bin": [
+        "bin/torchlight"
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Torchlight\\Ibis\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Torchlight\\Ibis\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aaron Francis",
+            "email": "aaron@hammerstone.dev"
+        }
+    ],
+    "require": {
+        "torchlight/torchlight-commonmark": "^0.4.0"
+    }
+}
