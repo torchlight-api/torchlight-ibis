@@ -1,5 +1,8 @@
 # Torchlight Client for Ibis
 
+[![Latest Stable Version](https://poser.pugx.org/torchlight/torchlight-ibis/v)](//packagist.org/packages/torchlight/torchlight-ibis) [![Total Downloads](https://poser.pugx.org/torchlight/torchlight-ibis/downloads)](//packagist.org/packages/torchlight/torchlight-ibis) [![License](https://poser.pugx.org/torchlight/torchlight-ibis/license)](//packagist.org/packages/torchlight/torchlight-ibis)
+
+
 A [Torchlight](https://torchlight.dev) syntax highlighting extension for the ebook builder [Ibis](https://github.com/themsaid/ibis).
 
 Torchlight is a VS Code-compatible syntax highlighter that requires no JavaScript, supports every language, every VS Code theme, line highlighting, git diffing, and more.
