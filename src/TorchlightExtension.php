@@ -10,12 +10,12 @@ use Illuminate\Cache\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Http;
 use League\CommonMark\ConfigurableEnvironmentInterface;
 use Torchlight\Block;
+use Torchlight\Commonmark\TorchlightExtension as TorchlightCommonmark;
 use Torchlight\Manager;
 use Torchlight\Torchlight;
-use Illuminate\Support\Facades\Http;
-use Torchlight\Commonmark\TorchlightExtension as TorchlightCommonmark;
 
 class TorchlightExtension
 {
@@ -80,5 +80,4 @@ class TorchlightExtension
             new FileStore(new Filesystem, $this->baseDir . DIRECTORY_SEPARATOR . 'cache')
         ));
     }
-
 }
