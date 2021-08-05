@@ -1,12 +1,5 @@
 # Torchlight Client for Ibis
 
-
-🚨 This package is currently waiting on [a PR to be merged](https://github.com/themsaid/ibis/pull/40) for Ibis. 🚨
-
-It won't work until then.
-
-----
-
 A [Torchlight](https://torchlight.dev) syntax highlighting extension for the ebook builder [Ibis](https://github.com/themsaid/ibis).
 
 Torchlight is a VS Code-compatible syntax highlighter that requires no JavaScript, supports every language, every VS Code theme, line highlighting, git diffing, and more.
@@ -24,17 +17,24 @@ If you haven't already, Composer will ask you to create a `composer.json` file i
 In your `ibis.php` file, add the following to your configuration:
 
 ```php
-'configure_commonmark' => function ($environment) {
-    TorchlightExtension::make()->register($environment);
-},
+return [
+    /**
+     * The book title.
+     */
+    'title' => 'Laravel Queues in Action',
+
+    // .....
+
+    'configure_commonmark' => function ($environment) {
+        \Torchlight\Ibis\TorchlightExtension::make()->register($environment);
+    },
+];
 ```
 
-At the top of your `ibis.php` file, you'll also need to add the composer autoloader and import the Torchlight namespace:
+At the top of your `ibis.php` file, you'll also need to add the composer autoloader if it's not already there:
 
 ```php
 <?php
-
-use Torchlight\Ibis\TorchlightExtension;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -45,6 +45,10 @@ return [
     'title' => 'Laravel Queues in Action',
 
     // .....
+
+    'configure_commonmark' => function ($environment) {
+        \Torchlight\Ibis\TorchlightExtension::make()->register($environment);
+    },
 ];
 ```
 
